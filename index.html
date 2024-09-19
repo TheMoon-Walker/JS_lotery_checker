@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <button class="shuffle-button" onclick="handleClick()">shuffle</button>
+      <div id="info-display" class="info-display">Loto</div>
+      <div>
+        <label for="user-input">veiller enter 3 nombres : </label>
+        <input type="text" name="user-input" id="user-input" autocomplete="off" />
+        <button onclick="handleValidation()" class="validation-button">valider ?</button>
+      </div>
+    </div>
+  </body>
+  <script src="logic.js"></script>
+</html>
