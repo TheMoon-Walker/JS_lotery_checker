@@ -1,11 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
 let validationButton = document.querySelector("#validation-button");
 let playerEntries = [];
 
+
+
+
+
+
+
+
+
+
+
+
 function handleValidation() {
   const userInputValue = document.querySelector("#user-input").value;
-  playerEntries.push(userInputValue);
-  console.log(playerEntries);
-  validationButton.style.display = "hidden";
+
+  console.log(userInputValue)
+  // validationButton.style.display = "hidden"; //une fois que le bouton valider est appuye , le faire disparaitre 
 }
 
 function handleClick() {
