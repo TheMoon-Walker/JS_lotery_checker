@@ -5,6 +5,7 @@ const validationButton = document.getElementById("validation-button");
 const numbersDisplayed = document.querySelector("#info-display");
 let playerEntries = [];
 
+
 function handleShowNumberClick() {
   function createListOfNumber() {
     let listOfNum = [];
@@ -15,13 +16,15 @@ function handleShowNumberClick() {
     numbersDisplayed.innerHTML = `<p>${listOfNum.join(" ' ")}</p>`;
     return listOfNum;
   }
-  function checkPlayerScore() {}
-
   createListOfNumber();
 }
-function handleValidation() {
+function handleValidationClick() {
+  //role juste recuperer les entrees du joueur
   const entries = document.querySelector("#user-input").value;
+  if (entries == !3) {
+    alert("vous devez entrer 3 chiffres");
+    playerEntries.push(entries);
+    console.log(playerEntries);
+  }
   console.log(Number(entries));
-
- 
 }
