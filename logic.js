@@ -1,44 +1,27 @@
+// TODO:optimiser les fonctions et les rendrent plus propre
+//TODO: reecrire toute la logique de facon propre
 
-
-
-
-
-
-
-
-
-
-
-let validationButton = document.querySelector("#validation-button");
+let validationButton = document.getElementById("validation-button");
 let playerEntries = [];
-
-
-
-
-
-
-
-
-
-
-
-
-function handleValidation() {
-  const userInputValue = document.querySelector("#user-input").value;
-
-  console.log(userInputValue)
-  // validationButton.style.display = "hidden"; //une fois que le bouton valider est appuye , le faire disparaitre 
-}
-
 function handleClick() {
   const numbersDisplayed = document.querySelector("#info-display");
-  const listOfNum = [];
   function randomNumber() {
+    let listOfNum = [];
     for (let i = 0; i < 10; i++) {
       let rnd = Math.floor(Math.random() * 10 + 1);
-      listOfNum.push(rnd);
+       listOfNum.push(rnd);
     }
-    numbersDisplayed.innerHTML = `<p>${listOfNum.join(" ' ")}</p>`;
+   
+   numbersDisplayed.innerHTML = `<p>${listOfNum.join(" ' ")}</p>`;
+   return listOfNum
   }
   randomNumber();
+
+}
+function handleValidation() {
+  const entries = document.querySelector("#user-input").value;
+  console.log(Number(entries));
+  console.log(randomNumber())
+
+  //  validationButton.style.color = "red";//ce truc est lancee avant le button qui le declanche
 }

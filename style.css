@@ -1,3 +1,7 @@
+
+/*TODO : nettoyer le les dechets et faire de sorte que les barre de defilement disparaissent */
+
+
 body {
   background-color: #deb887;
   display: flex;
@@ -18,7 +22,7 @@ body {
   flex-direction: column;
   gap: 15px;
   align-items: center;
-  width: 300px;
+  width: 60%;
 }
 
 .shuffle-button,
