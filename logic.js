@@ -1,30 +1,28 @@
 // TODO:optimiser les fonctions et les rendrent plus propre
 //TODO: reecrire toute la logique de facon propre
 
-// const validationButton = document.getElementById("validation-button");
+// const validationButton = document.getElementById("play-button");
 // const numbersDisplayed = document.querySelector("#info-display");
 // let playerEntries = [];
 
 //TODO: shuffle button afficher une alerte avec le score puis lancer l'annimation avec les paillettes windows
+//TODO: lorsqu'il appuie sur le button play recuperer les donnees entrees et desactiver le boutton
 
-const listA = [1, 2, 3, 4, 5, 6];
-const listB = [2, 4, 0,3];
-
-
-function listComparison(listA,listB){
-  const sameN = [];
+function listComparison(listA, listB) {
+  const sameNumber = [];
   for (let i = 0; i < listA.length; i++) {
-  for (let j = 0; j < listB.length; j++) {
-    if(listA[i] === listB[j]){
-      sameN.push(listA[i])
+    for (let j = 0; j < listB.length; j++) {
+      if (listA[i] === listB[j]) {
+        sameNumber.push(listA[i]);
+      }
     }
   }
+  return sameNumber;
 }
-console.log(sameN)
+
+function play(){
+
 }
-listComparison(listA,listB)
-
-
 
 // function handleShowNumberClick() {
 //   function createListOfNumber() {
