@@ -1,10 +1,8 @@
-
 //TODO: refaire des test sur la fonction listComparison pour voir le typeOf des parametre puis convertir les entries et les nombres aleatoir aux normes de la fonction listComparison
-
 
 const playBtn = document.getElementById("play-button");
 const result = document.getElementById("info-display");
-const entries = document.getElementById("user-inputnum");
+let entries = document.getElementById("user-inputnum").value;
 
 function listComparison(listA, listB) {
   const sameNumber = [];
@@ -15,8 +13,11 @@ function listComparison(listA, listB) {
       }
     }
   }
+  console.log(sameNumber);
   return sameNumber;
 }
+
+listComparison([1, 2, 3, 4, 5], [0.1, 3, 90, 4, 200]);
 
 function createListOfNumber() {
   let listOfNum = [];
@@ -32,11 +33,13 @@ function displayResult() {
 }
 
 function play() {
-  console.log(createListOfNumber());
-  console.log(entries.value.split(""));
-  console.log(createListOfNumber() == Array(entries.value.split("")));
-  console.log(
-    listComparison(createListOfNumber(), Array(entries.value.split("")))
-  );
+  let entries = document.getElementById("user-inputnum").value;
+  entries = Array.from(String(Math.abs(entries)), Number)
+// Math.absolute to ensure that we are working with a positive number even if it is negative 
+// the second arg of from map all element in the first arg to number
+
+  listComparison(entries,createListOfNumber())
+
+
   displayResult();
 }
