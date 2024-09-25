@@ -14,7 +14,7 @@ function listComparison(listA, listB) {
       }
     }
   }
-alert("votre score est de : " + Array.from(new Set(sameNumber)).length);
+  alert("votre score est de : " + Array.from(new Set(sameNumber)).length);
   return sameNumber;
 }
 
@@ -33,9 +33,21 @@ function displayResult() {
 
 function play() {
   let entries = document.getElementById("user-inputnum").value;
+
   entries = Array.from(String(Math.abs(entries)), Number);
-  // Math.absolute to ensure that we are working with a positive number even if it is negative
-  // the second arg of from map all element in the first arg to number
-  listComparison(entries, createListOfNumber());
-  displayResult();
+  if (entries && entries.length === 3) {
+    // Math.absolute to ensure that we are working with a positive number even if it is negative
+    // the second arg of from map all element in the first arg to number
+    listComparison(entries, createListOfNumber());
+
+    
+    setTimeout(() => {
+      displayResult();
+    }, (2000));
+    entries.innerHTML = ''
+  } else {
+    alert("you must input a something");
+    console.log(entries);
+    console.log(entries.length);
+  }
 }
