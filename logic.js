@@ -1,11 +1,14 @@
-//TODO: refaire des test sur la fonction listComparison pour voir le typeOf des parametre puis convertir les entries et les nombres aleatoir aux normes de la fonction listComparison
+// TODO: faire en sorte que sameNumber ne contienne pas de doublons
+// TODO: faire une fonction qui verifie le score du joueur et l'affiche
+
+
 
 const playBtn = document.getElementById("play-button");
 const result = document.getElementById("info-display");
 let entries = document.getElementById("user-inputnum").value;
 
 function listComparison(listA, listB) {
-  const sameNumber = [];
+  let sameNumber = []
   for (let i = 0; i < listA.length; i++) {
     for (let j = 0; j < listB.length; j++) {
       if (listA[i] === listB[j]) {
@@ -13,11 +16,11 @@ function listComparison(listA, listB) {
       }
     }
   }
-  console.log(sameNumber);
+  console.log(Array.from(new Set(sameNumber)))
   return sameNumber;
 }
 
-listComparison([1, 2, 3, 4, 5], [0.1, 3, 90, 4, 200]);
+
 
 function createListOfNumber() {
   let listOfNum = [];
